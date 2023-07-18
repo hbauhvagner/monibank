@@ -4,8 +4,6 @@ export default function ehUmCPF(campo) {
     if (validaNumerosRepetidos(cpf) || validaPrimeiroDigito(cpf) || validaSegundoDigito(cpf)) {
         campo.setCustomValidity('Esse cpf não é válido');
     }
-
-    console.log(validaNumerosRepetidos(cpf));
 }
 
 function validaNumerosRepetidos(cpf) {
@@ -58,5 +56,5 @@ function validaSegundoDigito(cpf) {
         soma = 0;
     }
 
-    return soma != cpf[9];
+    return soma != cpf[10];
 }
